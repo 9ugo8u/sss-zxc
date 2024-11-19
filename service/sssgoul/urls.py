@@ -25,5 +25,7 @@ router.register(r'sss', SsGameViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('o/', include(
+    'oauth2_provider.urls', namespace='oauth2_provider'))
 ]
 
